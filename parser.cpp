@@ -123,11 +123,13 @@ void Parser::parseJsonObject(json_object * jobj, boost::property_tree::ptree& ou
         }
         case json_type_object: {
             FLOG("type: json_type_object");
-            if(!json_object_object_get_ex(jobj, key, &jobj)){
+            json_object *recursion_jobj; //don't overwrite the parent jobj
+            if(!json_object_object_get_ex(jobj, key, &recursion_jobj)){
                 FLOG("Error getting object from key: " << key);
                 return;
             }
-            parseJsonObject(jobj, out, path);
+            parseJsonObject(recursion_jobj, out, path);
+            goBack1Level(path);
             break;
         }
         case json_type_array: {
