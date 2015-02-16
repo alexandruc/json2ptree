@@ -1,0 +1,248 @@
+{
+  "Expires": 1423997034,
+  "Generated": 1423910634,
+  "Permissions": [
+    {
+      "PK_Permission": 1,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 2,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 3,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 4,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 6,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 9,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 14,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 15,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 17,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 18,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 19,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 20,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 21,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 22,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 23,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 25,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 26,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 27,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 28,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 29,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 30,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 41,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 42,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 52,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 62,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 72,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 82,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 92,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 102,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 112,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 122,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 132,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 142,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 152,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 162,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 172,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 182,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 192,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 202,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 212,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 222,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 232,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 242,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 252,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 262,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 272,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 282,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 292,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 302,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 312,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 322,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 332,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 342,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 482,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 492,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 562,
+      "Mode": 1
+    },
+    {
+      "PK_Permission": 582,
+      "Mode": 1
+    }
+  ],
+  "PK_Account": 11003387,
+  "PK_AccountType": 5,
+  "PK_AccountChild": 0,
+  "PK_Account_Parent": 522,
+  "PK_App": 57,
+  "PK_Oem": 1,
+  "PK_Oem_User": "",
+  "PK_PermissionRole": 10,
+  "PK_User": 12002477,
+  "PK_Server_Auth": 1,
+  "PK_Server_Account": 6,
+  "PK_Server_Event": 14,
+  "Server_Auth": "castravete.server.meme.com",
+  "Username": "Vasile"
+}
