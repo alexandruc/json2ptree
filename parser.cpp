@@ -5,7 +5,6 @@
 namespace json {
 
 static const std::string pathSeparator = ".";
-static const std::string arrayElementKeyName = "element";
 
 void Parser::parseJson(const std::string& data, boost::property_tree::ptree& out){
     json_object * jobj = json_tokener_parse(data.c_str());
@@ -77,7 +76,11 @@ void Parser::parseJsonArray( json_object *jobj, char *key, boost::property_tree:
         jvalue = json_object_array_get_idx(jarray, i);
         type = json_object_get_type(jvalue);
         if (type == json_type_array) {
+            std::string elem;
+            buildArrayElem(elem, i);
+            path += pathSeparator + elem;
             parseJsonArray(jvalue, NULL, out, path);
+            goBack1Level(path);
         }
         else if (type != json_type_object) {
             FLOG("value[" << i <<"]:");
@@ -153,7 +156,7 @@ void Parser::goBack1Level(std::string& path) const
 void Parser::buildArrayElem(std::string& elem, int elemNum) const
 {
     //build new array elem
-    elem = arrayElementKeyName;
+    elem = "";
     char strNum[10];
     sprintf(strNum, "%d", elemNum);
     elem += strNum;

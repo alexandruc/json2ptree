@@ -7,7 +7,15 @@
       "c"
     ],
     "java",
-    "PHP"
+    "PHP",
+    [
+      "Bash",
+      "Batch",
+      [
+	"Lua",
+	"Lua1"
+      ]
+    ]
   ],
   "author-details": {
     "admin": false,
