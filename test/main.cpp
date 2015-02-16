@@ -3,6 +3,7 @@
 #include <string>
 #include "../parser.h"
 #include <boost/foreach.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
 void display(const int depth, const boost::property_tree::ptree& tree) {
     BOOST_FOREACH( boost::property_tree::ptree::value_type const&v, tree.get_child("") ) {
@@ -18,6 +19,45 @@ void display(const int depth, const boost::property_tree::ptree& tree) {
 
         // recursive go down the hierarchy
         display(depth+1,subtree);
+    }
+}
+
+void parseWithCustomParser(const std::string& json){
+    json::Parser jparser;
+    boost::property_tree::ptree pt;
+    try{
+        jparser.parseJson(json, pt);
+
+        std::cout << "Property tree - custom parsed:" << std::endl;
+        display(0, pt);
+    }
+    catch(boost::property_tree::ptree_bad_data ex){
+        std::cout << ex.what() << std::endl;
+    }
+    catch(boost::property_tree::ptree_bad_path ex){
+        std::cout << ex.what() << std::endl;
+    }
+    catch(boost::property_tree::ptree_error ex){
+        std::cout << ex.what() << std::endl;
+    }
+}
+
+void parseWithBoostParser(const std::string& json_file){
+    boost::property_tree::ptree pt;
+    try{
+        boost::property_tree::json_parser::read_json(json_file, pt);
+
+        std::cout << "Property tree - boost parsed:" << std::endl;
+        display(0, pt);
+    }
+    catch(boost::property_tree::ptree_bad_data ex){
+        std::cout << ex.what() << std::endl;
+    }
+    catch(boost::property_tree::ptree_bad_path ex){
+        std::cout << ex.what() << std::endl;
+    }
+    catch(boost::property_tree::ptree_error ex){
+        std::cout << ex.what() << std::endl;
     }
 }
 
@@ -48,22 +88,8 @@ int main(int argc, char* argv[]) {
     }
 
     std::cout << "JSON string: " << json << std::endl;
-    json::Parser jparser;
-    boost::property_tree::ptree pt;
-    try{
-        jparser.parseJson(json, pt);
 
-        std::cout << "Property tree:" << std::endl;
-        display(0, pt);
-    }
-    catch(boost::property_tree::ptree_bad_data ex){
-        std::cout << ex.what() << std::endl;
-    }
-    catch(boost::property_tree::ptree_bad_path ex){
-        std::cout << ex.what() << std::endl;
-    }
-    catch(boost::property_tree::ptree_error ex){
-        std::cout << ex.what() << std::endl;
-    }
+    parseWithCustomParser(json);
+    parseWithBoostParser(test_file);
 
 }

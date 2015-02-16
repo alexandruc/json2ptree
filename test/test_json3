@@ -13,7 +13,7 @@
       "Batch",
       [
 	"Lua",
-	"Lua1"
+	"Lua_ex"
       ]
     ]
   ],
