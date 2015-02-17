@@ -50,6 +50,9 @@ void parseWithBoostParser(const std::string& json_file){
         std::cout << "Property tree - boost parsed:" << std::endl;
         display(0, pt);
     }
+    catch(boost::property_tree::json_parser_error ex){
+        std::cout << ex.what() << std::endl;
+    }
     catch(boost::property_tree::ptree_bad_data ex){
         std::cout << ex.what() << std::endl;
     }
