@@ -11,6 +11,9 @@ void Parser::parseJson(const std::string& data, boost::property_tree::ptree& out
     if(jobj){
         std::string path = "";
         parseJsonObject(jobj, out, path);
+        if(1 == json_object_put(jobj)){
+            FLOG("object was deallocated correctly");
+        }
     }
     else{
         std::cout <<"json object is NULL - bad JSON format" << std::endl;
@@ -97,6 +100,9 @@ void Parser::parseJsonArray( json_object *jobj, char *key, boost::property_tree:
             parseJsonObject(jvalue, out, path);
             goBack1Level(path);
         }
+    }
+    if(1 == json_object_put(jarray)){
+        FLOG("object was deallocated correctly");
     }
 }
 
